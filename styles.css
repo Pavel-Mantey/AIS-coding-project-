@@ -1,0 +1,220 @@
+
+     /*TRANSITION AND OPENING ANIMATIONS*/
+     @keyframes navfadeIn{
+    from{opacity: 0; transform: translateY(0); }
+    to{opacity: 1;transform: translateY(10px); }
+      }
+      @keyframes fadeOut{
+        from{ opacity: 1; transform: translateY(0);}
+        to{opacity: 0; transform: translateY(20px);}
+      }
+      @keyframes fadeIn{
+        from{opacity: 0;transform: translateY(-20px);}
+        to{opacity: 1;transform: translateY(0);}
+      }
+      @keyframes levitate{
+        from{transform: translateY(0);}
+        to{transform: translateY(30px);}
+      }
+      @keyframes grow{
+        from{transform: scale(1.0);}
+        to{transform: scale(1.2);}
+      }
+      @keyframes moveLeft{
+        from{transform: translateX(0);}
+        to{transform: trnaslateX(30px);}
+      }
+      @keyframes slide{
+        from{transform: translateX(0);}
+        to{transform: translateX(30px);}
+      }
+/*END OF TRANSITION AND OPENING ANIMAITONS*/
+/*BODY ANIMATIONS & STYLING*/
+body{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.5s ease-in;
+    background-image: url(images/athirdlogo.png);
+    background-size:cover;
+    animation: fadeIn 0.5s ease-in;
+    
+}
+.allbody{
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in;
+    height: 700px;
+    grid-template-columns:auto, minmax(250px,1fr);
+    grid-template-rows: auto, minmax(250px, 1fr);
+    grid-column: 3;
+    grid-row: auto;
+    padding-top: 150px;
+    
+
+}
+/*END OF BODY STYLING AND ANIMATIONS*/
+/*HEADER AND FOOTER ANIMATIONS AND STYLING*/
+header{
+    background-color: rgb(0, 94, 255);
+    color: white;
+    text-align: center;
+    position: fixed;
+    display: block;
+    float: inline-start;
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+footer{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    position: sticky;
+
+}
+nav{
+    height: fit-content;
+    width: 100%;
+    color: white;
+    background-color: rgb(0, 81, 255);
+    justify-content: center;
+
+    
+}
+.tabs{
+    color: white;
+}
+.tabs:hover{
+    background-color: cornflowerblue;
+    animation: navfadeIn 0.5s ease-in;
+}
+.navbar{
+    background-color: rgb(0, 81, 255);
+    color: white;
+    height: 30px;
+    align-items: center;
+    }
+/*END OF HEADER AND FOOTER ANIMATIONS AND STYLING*/
+/*TEXT ANIMATIONS AND STYLING*/
+.title{
+   justify-content: center;
+   text-align: left;
+    background-color: rgba(0, 85, 255, 0.849);
+    display: flex;
+    font-size: 50px;
+    color: white;
+    
+}
+.titlebox{
+    opacity: 0.8;
+    color: white;
+
+}
+a{
+    font-style: normal;
+    align-self: center;
+    text-decoration: none;
+    
+}
+a:hover{
+    animation: grow 0.5s ease-in;
+}
+/*END OF LINK AND TEXT STYLING AND ANIMATIONS*/
+/*STYLING OF THE INFORMATION TILES*/
+.bigtile{
+    justify-content:center;
+    height: 200px;
+    width: 800px;
+    height: 200px;
+    background-color:lightskyblue;
+    border-radius: 40px;
+    text-align:center;
+}
+
+.normaltile1{
+    grid-column: 1;
+    grid-row: 1;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+    background-color:lightskyblue;
+
+
+}
+.normaltile2{
+    background-color:lightskyblue;
+     grid-column: 2;
+    grid-row: 1;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+
+}
+.normaltile3{
+   background-color:lightskyblue;
+     grid-column: 2;
+    grid-row: 1;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+    
+
+}
+.normaltile4{
+     grid-column: 1;
+    grid-row: 2;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+   background-color:lightskyblue;
+
+}
+.normaltile5{
+     grid-column: 1;
+    grid-row: 1;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+   background-color:lightskyblue;
+}
+.normaltile6{
+     grid-column: 1;
+    grid-row: 1;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+   background-color:lightskyblue;
+
+}
+.picturetile{
+    display: flex;
+    background-image: url(images/bgpattern.jpg);
+    background-size: cover;
+    height:fit-content ;
+    width:fit-content ;
+    border-radius: 0px;
+}
+.txtbox{
+    height: fit-content;
+    width:fit-content ;
+    overflow: scroll;
+
+}
+/*END OF STYILING OF THE INFORMATION TILES*/
+/*BUTTONS AND BUTOTN ANIMATIONS*/
+button{
+    background-color: rgb(0, 102, 255);
+    color: white;
+    width: 60px;
+    height: 20px;
+    text-decoration: none;
+    text-align: center;
+    align-self: bottom;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(0, 123, 255);
+    color: white;
+    animation: grow 0.5s ease-in;
+}
+/*END OF BUTTON STYLING AND ANIMATIONS*/
