@@ -1,32 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-         <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>About Akosombo International School</title>
-    </head>
-    <body>
-        <style>
-            .navbar{
-                color: white;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS-Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to AIS-Home</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#Facilities">Facilities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            }
-            body{
-                background-image: url(images/athirdlogo.png);
-                background-size: cover;
+    <section id="about">
+        <h2>About Us</h2>
+        <p></p>
+    </section>
 
-            }
-        </style>
-        <header>
-                    <a href="index.html" class="tabs">Home</a>
-                    <a href="contacts.html"class="tabs">Contact Us</a>
-                    <a href="map.html"class="tabs">School Layout</a>
-                </nav>
-        </header>
-        <section class="allbody"></section>
-        <footer></footer>
-    </body>
+    <section id="Facilities">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Fully fitted ICT Lab: the school posesses a fully refitted and refurbished ICt lab,
+                which is equipped with modern hardware and software. The refurbishing was carried
+            out to ensure optimal learning conditions for students, by the AISOSA 2004 year group.</li>
+            <li>The Len Allen Memorial Library:
+Named in honor of Mr. Len Allen. The late Mr. Len Allen was a Canadian Engineering Consultant. He was a man of many humane qualities. He first came to Ghana in 1952 as a member of a team of engineers from Sir William Halcrow and Partners who were in charge of the Volta River Project. Prominent among the tasks performed by Len Allen was the delineation of the proposed Volta River Reservoir, and the establishment of a network of permanent river gauges. After completion of Hydro-electric projects in other parts of the world, he later returned to Ghana as the Resident Manager of Acres International Engineering Consultants who were involved in the construction of the Kpong-Akuse Hydro-Electric Plant. During his stay at Akuse, Mr. Allen saw to the planting of fruit trees and the beautification of Akuse.
 
+Len Allen finally returned to his home country (Canada) in July 1982, after having been awarded the Grand Medal of Ghana (Civil Division) by the Ghana Government. He received a similar award from the Canadian government. He died on May 4, 1983, in Toronto, Canada. It was in recognition of his services to the school that the library was named after him. There is also the Allen Memorial fund which has been instituted in memory of Len Allen. The fund was established with the contributions and donations made by sympathizers at the memorial service held in honor of Mr. Len Allen in Toronto, Canada. The accruing interest from the fund is used to replenish the stock of literary material in the library. There is also the Len Allen Physical Science Awards Scheme that gives awards to deserving students. the library serves as a central hub for knowledge and learning.
+
+The library is well-stocked with a variety of literature, including textbooks, encyclopedias, periodicals, journals and national dailies, among others. The Library offers Reference and Lending Services to the staff and students of Akosombo International School. However, adults and students from other institutions may be offered Reference services during vacation. The Libraries at Akuse and Aboadze schools are similarly organised.
+
+Collections: Textbooks, encyclopedias, journals, periodicals, and national dailies.
+Services: Reference and lending services for students and staff; adults and visitors may
+Special Programmes: Allen Memorial Fund replenishes library stock; Len Allen Physical Science Awards recognize outstanding students.
+            <li>Sports & Outdoor Facilities
+Swimming Pool: Supervised swimming for recreation and training.
+Basketball Court: For practice, inter-house, and inter-school competitions.
+Multi-Purpose School Field: Used for athletics, football, games, sports days, and outdoor events.
+Additional sports facilities include volleyball courts, table tennis areas, and recreational spaces.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AIS-Home. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
-
