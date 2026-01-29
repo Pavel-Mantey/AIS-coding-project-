@@ -43,10 +43,8 @@ body{
     justify-content: center;
     animation: fadeIn 0.5s ease-in;
     height: 700px;
-    grid-template-columns:auto, minmax(250px,1fr);
-    grid-template-rows: auto, minmax(250px, 1fr);
-    grid-column: 3;
-    grid-row: auto;
+    grid-template-columns:auto auto auto;
+    grid-template-rows:auto auto auto;
     padding-top: 150px;
     
 
@@ -193,6 +191,11 @@ a:hover{
     height:fit-content ;
     width:fit-content ;
     border-radius: 0px;
+}
+.inputbox{
+height:fit-content;
+width:300px;
+overflow:hidden;
 }
 .txtbox{
     height: fit-content;
