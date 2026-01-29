@@ -1,5 +1,4 @@
 # AIS-coding-project-
-The coding project for Akosombo International School  which is creating a School website 
-hiiii
-This is a message from Albert
+The coding project that involves creating a website for Akosombo International School.
+
 
