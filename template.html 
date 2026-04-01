@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Akosombo International School - official website. Excellence in education, Ghanaian & Cambridge curriculum, state-of-the-art facilities, and a legacy of notable alumni.">
+  <title>Akosombo International School | Truth is our Light</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Poppins & Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f8fafc;
+      color: #1e2a3e;
+      line-height: 1.5;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, .nav-links a, .logo h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: #0b2b3b;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 18px 24px;
+      border-bottom: 1px solid #2c4b5e;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo p {
+      font-size: 0.85rem;
+      color: #ffd966;
+      font-weight: 500;
+    }
+
+    .motto {
+      background: #ffcd4a;
+      color: #0b2b3b;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #0f3b4e;
+      padding: 0 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 4px;
+    }
+
+    .nav-links li a {
+      display: inline-block;
+      padding: 14px 18px;
+      color: #f0f4f8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      border-radius: 6px;
+    }
+
+    .nav-links li a:hover, .nav-links li a.active {
+      background: #ffcd4a;
+      color: #0b2b3b;
+    }
+
+    /* main content */
+    .page-content {
+      min-height: 65vh;
+      background: white;
+      margin: 40px 24px;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+      padding: 40px 32px;
+      transition: all 0.2s;
+    }
+
+    .page {
+      display: none;
+      animation: fade 0.3s ease;
+    }
+
+    .active-page {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(8px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* page styling */
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0b2b3b;
+      border-left: 5px solid #ffcd4a;
+      padding-left: 20px;
+    }
+
+    h3 {
+      margin: 1.5rem 0 0.8rem 0;
+      color: #1f4e6e;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin: 30px 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border: 1px solid #e9eef3;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #ffcd4a;
+    }
+
+    .card i {
+      font-size: 2.2rem;
+      color: #ffb347;
+      margin-bottom: 12px;
+    }
+
+    .alumni-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .alumni-card {
+      background: #fef9e8;
+      border-radius: 20px;
+      padding: 18px;
+      width: calc(33% - 16px);
+      min-width: 220px;
+      border-left: 5px solid #ffcd4a;
+    }
+
+    .news-item, .event-item {
+      background: #f5f9ff;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid #ffcd4a;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .contact-details {
+      flex: 1;
+      background: #f0f4fa;
+      padding: 25px;
+      border-radius: 24px;
+    }
+
+    .contact-form {
+      flex: 1;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 25px;
+      border-radius: 24px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 40px;
+      font-family: inherit;
+    }
+
+    textarea {
+      border-radius: 20px;
+      resize: vertical;
+    }
+
+    button {
+      background: #0b2b3b;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #ffcd4a;
+      color: #0b2b3b;
+    }
+
+    .map-container {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      margin: 30px 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+
+    footer {
+      background: #0b2b3b;
+      color: #cfdfe8;
+      padding: 40px 24px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .footer-col h4 {
+      color: #ffcd4a;
+      margin-bottom: 15px;
+    }
+
+    .copyright {
+      border-top: 1px solid #2c4b5e;
+      margin-top: 30px;
+      padding-top: 20px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 780px) {
+      .nav-links li a {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+      .page-content {
+        padding: 24px 20px;
+      }
+      h2 {
+        font-size: 1.6rem;
+      }
+      .alumni-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <div class="logo">
+      <h1>AKOSOMBO <span style="color:#ffcd4a;">INTERNATIONAL</span></h1>
+      <p>Truth is our Light | Est. 1975</p>
+    </div>
+    <div class="motto">
+      <i class="fas fa-graduation-cap"></i> Excellence • Integrity • Service
+    </div>
+  </div>
+  <div class="navbar">
+    <ul class="nav-links container">
+      <li><a href="#" data-page="home" class="active"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#" data-page="about"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#" data-page="offer"><i class="fas fa-book-open"></i> What We Offer</a></li>
+      <li><a href="#" data-page="facility"><i class="fas fa-building"></i> Facilities</a></li>
+      <li><a href="#" data-page="spirituality"><i class="fas fa-pray"></i> Spirituality</a></li>
+      <li><a href="#" data-page="alumni"><i class="fas fa-star"></i> Notable Alumni</a></li>
+      <li><a href="#" data-page="news"><i class="fas fa-newspaper"></i> News</a></li>
+      <li><a href="#" data-page="virtualmap"><i class="fas fa-map-marker-alt"></i> Virtual Map</a></li>
+      <li><a href="#" data-page="contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container page-content">
+  <!-- HOME PAGE -->
+  <div id="home" class="page active-page">
+    <h2>Welcome to Akosombo International School</h2>
+    <p style="font-size:1.2rem; margin-bottom:20px;">Where academic excellence meets character development. Nestled in the serene town of Akosombo, AIS is a beacon of holistic education in Ghana.</p>
+    <div class="grid-cards">
+      <div class="card"><i class="fas fa-chalkboard-user"></i><h3>Academic Excellence</h3><p>WASSCE & Cambridge IGCSE/A-Level pathways. Consistently top-tier results in Ghana and global competitions.</p></div>
+      <div class="card"><i class="fas fa-globe"></i><h3>Global Recognition</h3><p>British Council partner school. Global winner of "Your World Competition" 2022.</p></div>
+      <div class="card"><i class="fas fa-trophy"></i><h3>Champions in Sports</h3><p>Gold medalist Kweku Ayim (Discus) at U-18 Five-Nation Invitational 2025.</p></div>
+    </div>
+    <div style="background: #eef2f7; padding: 20px; border-radius: 24px; margin-top: 20px;">
+      <i class="fas fa-quote-left"></i> "We shape world-class leaders rooted in truth and service." – Sarah Freda Adei (Headmistress)
+    </div>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="about" class="page">
+    <h2>About Akosombo International School</h2>
+    <p><strong>Founded in 1975</strong> by the Volta River Authority (VRA), AIS began as a community school to serve families of the Akosombo Dam project and has since grown into one of Ghana’s most prestigious second-cycle institutions.</p>
+    <p>Managed by <strong>VRA Schools Limited (VSL)</strong>, the school operates with a mission to nurture disciplined, intellectually vibrant, and morally upright young men and women. The motto <em>“Truth is our Light”</em> guides every facet of school life.</p>
+    <h3>Leadership</h3>
+    <p>Headmistress: <strong>Mrs. Sarah Freda Adei</strong> – a visionary leader dedicated to academic innovation and student welfare.</p>
+    <h3>Golden Jubilee (2025)</h3>
+    <p>Celebrating 50 years of excellence with legacy projects: refurbished ICT Lab, new Archway and Gatehouse donated by alumni, reinforcing our commitment to future generations.</p>
+  </div>
+
+  <!-- WHAT WE OFFER -->
+  <div id="offer" class="page">
+    <h2>What We Offer</h2>
+    <p>AIS provides a dynamic curriculum blending Ghanaian national standards with Cambridge International pathways.</p>
+    <div class="grid-cards">
+      <div class="card"><i class="fas fa-flask"></i><h3>Academic Programs</h3><p>General Science, General Arts, Business, Visual Arts, Home Economics. WASSCE & Cambridge IGCSE / A-Level.</p></div>
+      <div class="card"><i class="fas fa-futbol"></i><h3>Sports & Athletics</h3><p>Football, basketball, athletics, swimming, and elite coaching. Our students shine in regional & international meets.</p></div>
+      <div class="card"><i class="fas fa-microphone-alt"></i><h3>Clubs & Societies</h3><p>Debate, Science Club, Robotics, Drama, Writers' Circle, and Model UN — fostering leadership and creativity.</p></div>
+      <div class="card"><i class="fas fa-hands-helping"></i><h3>Leadership & Service</h3><p>Prefect body, community outreach programs, and environmental sustainability projects.</p></div>
+    </div>
+    <p>Boarding life is organized into four houses: <strong>Ames, Dobson, Kaizer, and Quartey</strong> — each nurturing camaraderie and healthy competition.</p>
+  </div>
+
+  <!-- FACILITY PAGE -->
+  <div id="facility" class="page">
+    <h2>State-of-the-Art Facilities</h2>
+    <div class="grid-cards">
+      <div class="card"><i class="fas fa-laptop-code"></i><h3>ICT Hub & STEM Labs</h3><p>Modern computer labs, fully equipped science laboratories for Physics, Chemistry & Biology.</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>Resource Centre</h3><p>Spacious library with e-learning resources, research materials, and quiet study zones.</p></div>
+      <div class="card"><i class="fas fa-dorm"></i><h3>Boarding Houses</h3><p>Ames, Dobson, Kaizer, Quartey — comfortable accommodation with 24/7 house parents, dining hall, and recreation.</p></div>
+      <div class="card"><i class="fas fa-futbol"></i><h3>Sports Complex</h3><p>Standard football pitch, basketball courts, athletics track, and gymnasium.</p></div>
+      <div class="card"><i class="fas fa-church"></i><h3>Chapel & Assembly Hall</h3><p>Multi-purpose auditorium for spiritual gatherings, school events, and academic ceremonies.</p></div>
+      <div class="card"><i class="fas fa-medkit"></i><h3>Health Centre</h3><p>Qualified nurses and visiting doctors, 24/7 care for all boarding students.</p></div>
+    </div>
+    <p>Recently renovated ICT Lab and new Gatehouse (2025) donated by alumni as part of 50th anniversary legacy.</p>
+  </div>
+
+  <!-- SPIRITUALITY PAGE -->
+  <div id="spirituality" class="page">
+    <h2>Spiritual Development</h2>
+    <p>At Akosombo International School, we believe in nurturing the whole person — mind, body, and spirit. The school encourages spiritual growth through interdenominational Christian fellowship, but respects all beliefs in a culture of tolerance.</p>
+    <div class="grid-cards">
+      <div class="card"><i class="fas fa-praying-hands"></i><h3>Daily Devotion</h3><p>Morning assemblies with scripture reading, prayers, and motivational talks.</p></div>
+      <div class="card"><i class="fas fa-users"></i><h3>Christian Fellowship</h3><p>Voluntary Scripture Union (SU) meetings, weekend services, and choir rehearsals.</p></div>
+      <div class="card"><i class="fas fa-heart"></i><h3>Moral Values</h3><p>Emphasis on integrity, empathy, service to humanity — core values aligned with our motto.</p></div>
+    </div>
+    <p>Special services are held during the academic year: Founder's Day Thanksgiving, Easter conventions, and annual carol service.</p>
+  </div>
+
+  <!-- NOTABLE ALUMNI PAGE -->
+  <div id="alumni" class="page">
+    <h2>Distinguished Alumni</h2>
+    <p>AIS alumni have risen to prominence across government, arts, diplomacy, academia, and media. They continue to inspire current students.</p>
+    <div class="alumni-list">
+      <div class="alumni-card"><i class="fas fa-user-tie"></i><strong>Hon. Shirley Ayorkor Botchwey</strong><br>Commonwealth Secretary-General, former Minister for Foreign Affairs (Ghana).</div>
+      <div class="alumni-card"><i class="fas fa-user"></i><strong>Hajia Samira Bawumia</strong><br>Former Second Lady of Ghana; philanthropist and advocate.</div>
+      <div class="alumni-card"><i class="fas fa-film"></i><strong>Lydia Forson</strong><br>Award-winning actress, writer, and producer.</div>
+      <div class="alumni-card"><i class="fas fa-microphone"></i><strong>Jessica Opare-Saforo</strong><br>Media personality, broadcaster, and entrepreneur.</div>
+      <div class="alumni-card"><i class="fas fa-tv"></i><strong>Selly Galley</strong><br>Actress, television presenter, and fashion icon.</div>
+      <div class="alumni-card"><i class="fas fa-atom"></i><strong>Prof. Divine Kumah</strong><br>Renowned physicist, professor, and researcher.</div>
+    </div>
+    <p style="margin-top:20px;">... and many more leaders shaping Ghana and the world. <i class="fas fa-award"></i> The alumni association (AISAA) actively supports school development.</p>
+  </div>
+
+  <!-- NEWS PAGE -->
+  <div id="news" class="page">
+    <h2>Latest News & Achievements</h2>
+    <div class="news-item">
+      <i class="fas fa-medal" style="color:#eab308;"></i> <strong>March 2025:</strong> Kweku Ayim (Form 2) wins GOLD at U-18 Five-Nation Invitational Athletics Competition (Discus, 39.03m – new record!). 
+    </div>
+    <div class="news-item">
+      <i class="fas fa-globe-africa"></i> <strong>December 2022:</strong> British Council "Your World Competition" – AIS named GLOBAL WINNER for climate change solution video.
+    </div>
+    <div class="news-item">
+      <i class="fas fa-birthday-cake"></i> <strong>January 2025:</strong> Grand 50th Anniversary Jubilee – commissioning of Archway, Gatehouse, and refurbished ICT Lab. Theme: "Vision, Leadership and the Way Forward."
+    </div>
+    <div class="news-item">
+      <i class="fas fa-chart-line"></i> <strong>2024 WASSCE Results:</strong> 98% pass rate in core subjects with multiple distinctions; Cambridge IGCSE distinction in Maths, English, Sciences.
+    </div>
+    <div class="news-item">
+      <i class="fas fa-hand-sparkles"></i> <strong>Ongoing:</strong> AIS hosts annual Inter-House Sports & STEM Fair — community engagement at its peak.
+    </div>
+  </div>
+
+  <!-- VIRTUAL MAP PAGE -->
+  <div id="virtualmap" class="page">
+    <h2>Virtual Campus Tour & Location</h2>
+    <p>Akosombo International School is located in the serene Asuogyaman District, Eastern Region, Ghana. Nestled near the Volta River Authority township, the campus offers scenic views and a conducive learning environment.</p>
+    <div class="map-container">
+      <!-- Google Maps embed: Akosombo, Eastern Region, Ghana -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15877.716255121528!2d0.03481977628016058!3d6.265052539776857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf512c1d914b07%3A0x7c2f168a2d01bcea!2sAkosombo%2C%20Eastern%20Region%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1711897788292!5m2!1sen!2sgh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p><i class="fas fa-location-dot"></i> <strong>Address:</strong> VRA Township, Akosombo, Eastern Region, Ghana (GPS: Near Akosombo Dam, behind VRA Head Office).</p>
+    <p>Visitors are welcome by appointment. Virtual tours can be arranged through admissions.</p>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact" class="page">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div class="contact-details">
+        <h3><i class="fas fa-address-card"></i> Administration</h3>
+        <p><i class="fas fa-map-pin"></i> Akosombo International School<br>P.O. Box 14, Akosombo, Eastern Region, Ghana</p>
+        <p><i class="fas fa-phone-alt"></i> +233 (0) 54 123 4567 / +233 (0) 24 456 7890</p>
+        <p><i class="fas fa-envelope"></i> info@akosombointernational.edu.gh<br>admissions@ais.edu.gh</p>
+        <p><i class="fas fa-clock"></i> Office Hours: Mon–Fri, 8:00am – 4:00pm</p>
+        <hr style="margin: 20px 0;">
+        <p><i class="fas fa-globe"></i> VRA Schools Limited (Management) – Official oversight body</p>
+      </div>
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form id="demo-contact">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name" required>
+          <label>Email Address</label>
+          <input type="email" placeholder="Your email" required>
+          <label>Message</label>
+          <textarea rows="4" placeholder="Inquiry about admissions, visits, or partnership"></textarea>
+          <button type="submit">Submit <i class="fas fa-paper-plane"></i></button>
+          <p style="font-size:12px; margin-top:10px;">* Demo form – for real inquiries please call or email.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Akosombo Int’l School</h4>
+      <p>Truth is our Light<br>Since 1975</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <p><a href="#" data-page="admissions" style="color:#ffcd4a; text-decoration:none;">Admissions</a> (Coming 2026)<br>
+      <a href="#" data-page="alumni" style="color:#ffcd4a; text-decoration:none;">Alumni Portal</a><br>
+      <a href="#" style="color:#ffcd4a; text-decoration:none;">Staff Mail</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Accreditation</h4>
+      <p>Ghana Education Service<br>British Council Partner School<br>Cambridge Assessment International Education</p>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <p><i class="fab fa-facebook"></i> @AISofficial<br><i class="fab fa-instagram"></i> @akosombo_int_sch<br><i class="fab fa-twitter"></i> @AIS_TruthLight</p>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© 2026 Akosombo International School (VRA Schools Limited). All rights reserved. | Designed with pride in Ghana.</p>
+  </div>
+</footer>
+
+<script>
+  // PAGE SWITCHING LOGIC
+  const pages = document.querySelectorAll('.page');
+  const navLinks = document.querySelectorAll('.nav-links li a');
+
+  function showPage(pageId) {
+    pages.forEach(page => {
+      page.classList.remove('active-page');
+      if (page.id === pageId) {
+        page.classList.add('active-page');
+      }
+    });
+    // update active class on navbar
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute('data-page');
+      if (linkPage === pageId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const pageId = link.getAttribute('data-page');
+      if (pageId) {
+        showPage(pageId);
+      } else {
+        // fallback if data-page missing
+      }
+    });
+  });
+
+  // Also handle footer quick links alumni page
+  const footerAlumni = document.querySelector('a[data-page="alumni"]');
+  if(footerAlumni) {
+    footerAlumni.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPage('alumni');
+    });
+  }
+  // For any other potential data-page in footer (admissions not built, but just redirect home)
+  const footerAdmission = document.querySelector('a[data-page="admissions"]');
+  if(footerAdmission) {
+    footerAdmission.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Admissions for 2026/2027 academic year will open in September. Contact admissions office for details.');
+    });
+  }
+
+  // Contact form demo (prevent actual submit)
+  const contactForm = document.getElementById('demo-contact');
+  if(contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for reaching out! Our admissions team will respond within 2 business days. (Demo mode)');
+      contactForm.reset();
+    });
+  }
+
+  // Additional protocol: set default home if URL hash is empty, but we already have active home
+  // ensure that if someone clicks brand etc
+  const logoTitle = document.querySelector('.logo');
+  if(logoTitle) {
+    logoTitle.addEventListener('click', () => showPage('home'));
+  }
+</script>
+</body>
+</html>
