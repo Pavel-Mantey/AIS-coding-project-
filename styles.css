@@ -30,12 +30,14 @@
 }
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin:5px;
     background:url();
     background-size:contain;
     align-items:center;
     justify-content:center;
     animation:fadeIn 1s ease-in-out;
+    width:100%;
+    display:flex;
+    flex-direction:column;
 }
 main{
     width:100%;
@@ -543,13 +545,12 @@ a:hover{
     width:80%;
     grid-template-rows: repeat(auto,auto);
     display:grid;
-    padding:10px;
+    padding:20px;
     align-items:center;
     justify-content:center;
     justify-self:center;
     align-self:center;
     text-align:center;
-    border:1px solid black;
     border-radius:10px;
 }
 .headmistress{
@@ -559,12 +560,13 @@ a:hover{
     text-align:center;
     grid-template-columns: 1fr,2fr;
     display:grid;
-    height:225px;
+    height:200px;
     width:500px;
     border-radius:20px;
      box-shadow:1px 2px 3px 3px grey;
+     margin-bottom:40px;
 }
-.headmistress:hover,.staff:hover{
+.headmistress:hover,.staff1:hover,.staff2:hover,.staff3:hover,.staff4:hover{
     transform:translateY(-10px);
     transition-duration:0.5s;
     cursor:pointer;
@@ -573,26 +575,46 @@ a:hover{
     grid-column:1;
     border-top-left-radius:20px;
     border-bottom-left-radius:20px;
+    height:200px;
 
 }
 .staff_name{
     grid-column:2;
     text-align:center;
-    font-size:20px;
+    font-size:15px;
+    padding:5px;
 }
-.rest_of_staff{
+.staff_image{
+    width:100px;
+    height:150px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+}
+.rest_of_administration{
     grid-row:3;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(4,300px);
     gap:20px;
     justify-content:center;
     align-items:center;
 }
-.staff1{
+.staff1,.staff2,.staff3,.staff4{
     grid-template-columns:1fr,2fr;
     display:grid;
     height: 150px;
     width:100%;
     border-radius:20px;
      box-shadow:1px 2px 3px 3px grey;
+}
+.staff1{
+    grid-column:1;
+}
+.staff2{
+    grid-column:2;
+}
+.staff3{
+    grid-column:3;
+}
+.staff4{
+    grid-column:4;
 }
