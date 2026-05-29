@@ -23,6 +23,9 @@
       margin: 0 auto;
       padding: 0 24px;
     }
+    main{
+      margin:15px;
+    }
     /* header */
     header {
       background: #0b2b3b;
@@ -116,7 +119,6 @@
       font-size: 2rem;
       margin-bottom: 1.5rem;
       color: #0b2b3b;
-      border-left: 6px solid #ffcd4a;
       padding-left: 20px;
     }
     h3 {
@@ -304,19 +306,79 @@
       justify-items:center;
       row-gap:70px;
     }
-    .alumni-page div{
+    .alumni-card{
       height:500px;
       width:80%;
       border:1px solid black;
       border-radius:50px;
       display:flex;
-      flex-direction:column;
+      flex-direction:column-reverse;
       overflow:hidden;
     }
-   .alumni-page div:hover{
+  .alumni-page div:hover{
     backdrop-filter: blur(200px);
     transform:scaleY(1.2);
     overflow:visible;
     transition-duration:0.3s;
 
+   }
+   .gallery-content{
+    align-items:center;
+    justify-items:center;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+
+   }
+   .gallery-content a{
+    color:black;
+    text-decoration:none;
+   }
+   .gallery-content a:hover{
+    text-decoration:underline;
+    transition-duration:0.3s;
+    transform:translateY(-8px);
+   }
+   .tabs{
+    gap:40px;
+    display:flex;
+    font-size:25px;
+   }
+   .gallery-pics{
+    align-content:center;
+    justify-items:center;
+     width:90%;
+     display:grid;
+     grid-template-columns:repeat(3,1fr);
+     padding:5px;
+     gap:15px;
+
+   }
+   .gallery-pics2,.gallery-pics3{
+    display:none;
+
+   }
+   .gallery-pics img{
+    height:300px;
+    width:95%;
+   }
+   .courses-content{
+    text-align:left;
+    align-content:center;
+    padding:100px;
+    display:flex;
+    flex-direction:column;
+   }
+   .courses-content h2{
+    text-decoration:underline;
+    text-align:center;
+
+   }
+   .courses-content section{
+    width:100%;
+    justify-content:space-between;
+    display:flex;
+      flex-direction:row;
+      margin:20px;
    }
